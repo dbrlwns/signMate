@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">SignMate 서비스 아키텍처</title>
+  <desc id="desc">사용자 카메라 입력이 브라우저 내부의 MediaPipe 손 인식과 수어 분류 모델을 거쳐 결과 표시와 로컬 학습 기록 저장으로 이어지는 구조</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f5fbf8"/><stop offset="1" stop-color="#eef5ff"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#183153" flood-opacity=".12"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#398b70"/></marker>
+    <style>
+      .title{font:700 46px 'Apple SD Gothic Neo','Noto Sans KR',Arial,sans-serif;fill:#183153}.sub{font:400 22px 'Apple SD Gothic Neo','Noto Sans KR',Arial,sans-serif;fill:#5e7085}.head{font:700 25px 'Apple SD Gothic Neo','Noto Sans KR',Arial,sans-serif;fill:#183153}.body{font:400 19px 'Apple SD Gothic Neo','Noto Sans KR',Arial,sans-serif;fill:#506174}.small{font:600 17px 'Apple SD Gothic Neo','Noto Sans KR',Arial,sans-serif;fill:#27745b}.box{fill:#fff;stroke:#d7e6df;stroke-width:2}.line{stroke:#398b70;stroke-width:4;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="800" y="82" text-anchor="middle" class="title">SignMate 서비스 아키텍처</text>
+  <text x="800" y="122" text-anchor="middle" class="sub">카메라 영상과 AI 추론은 사용자 브라우저 안에서 처리됩니다.</text>
+  <rect x="90" y="245" width="250" height="230" rx="28" class="box" filter="url(#shadow)"/>
+  <circle cx="215" cy="310" r="38" fill="#dff5e9"/><path d="M215 282a18 18 0 1 0 0 36 18 18 0 0 0 0-36m-34 91c2-31 66-31 68 0" fill="none" stroke="#278269" stroke-width="10" stroke-linecap="round"/>
+  <text x="215" y="410" text-anchor="middle" class="head">사용자</text><text x="215" y="443" text-anchor="middle" class="body">스마트폰·웹브라우저</text>
+  <rect x="440" y="205" width="325" height="310" rx="28" class="box" filter="url(#shadow)"/>
+  <rect x="474" y="252" width="257" height="80" rx="16" fill="#e6f4ef"/><text x="602" y="302" text-anchor="middle" class="head">카메라 영상 입력</text>
+  <rect x="474" y="356" width="257" height="112" rx="16" fill="#f2f7fd"/><text x="602" y="403" text-anchor="middle" class="head">SignMate 모바일 웹</text><text x="602" y="435" text-anchor="middle" class="body">React · TypeScript</text>
+  <rect x="866" y="165" width="360" height="390" rx="28" fill="#f8fffb" stroke="#78c5a6" stroke-width="3" filter="url(#shadow)"/>
+  <text x="1046" y="222" text-anchor="middle" class="head">브라우저 내 AI 처리</text>
+  <rect x="900" y="255" width="292" height="94" rx="16" fill="#dff5e9"/><text x="1046" y="296" text-anchor="middle" class="head">MediaPipe Hand Landmarker</text><text x="1046" y="326" text-anchor="middle" class="body">손 관절 좌표 추출</text>
+  <rect x="900" y="377" width="292" height="94" rx="16" fill="#e8f1ff"/><text x="1046" y="418" text-anchor="middle" class="head">수어 분류 모델</text><text x="1046" y="448" text-anchor="middle" class="body">기초 수어 10개 예측</text>
+  <rect x="900" y="499" width="292" height="34" rx="12" fill="#fff5d9"/><text x="1046" y="523" text-anchor="middle" class="small">최근 12프레임 평균 · 신뢰도 70% 이상</text>
+  <rect x="1325" y="245" width="210" height="230" rx="28" class="box" filter="url(#shadow)"/>
+  <rect x="1360" y="281" width="140" height="75" rx="16" fill="#e8f1ff"/><text x="1430" y="328" text-anchor="middle" class="head">인식 결과</text><text x="1430" y="411" text-anchor="middle" class="body">수어 이름</text><text x="1430" y="441" text-anchor="middle" class="body">신뢰도 · 정답 여부</text>
+  <path d="M340 360H425" class="line"/><path d="M765 360H850" class="line"/><path d="M1226 360H1310" class="line"/>
+  <rect x="520" y="660" width="560" height="126" rx="25" fill="#fff" stroke="#d7e6df" stroke-width="2" filter="url(#shadow)"/>
+  <path d="M570 702h35v45h-35z" fill="#dff5e9" stroke="#278269" stroke-width="4"/><path d="M579 715h17m-17 13h17" stroke="#278269" stroke-width="4" stroke-linecap="round"/>
+  <text x="640" y="714" class="head">학습 기록 저장</text><text x="640" y="750" class="body">학습한 표현·퀴즈 점수는 브라우저 localStorage에 저장합니다.</text>
+  <path d="M1430 490V590H800V645" class="line"/>
+  <text x="800" y="850" text-anchor="middle" class="small">카메라 원본 영상은 서버로 전송하거나 저장하지 않습니다.</text>
+</svg>
